@@ -7,8 +7,10 @@ body {
 }
 
 #board {
-    width: 450px;
-    height: 450px;
+    width: 90vw;         /* ikut lebar layar HP */
+    height: 90vw;        /* biar tetap kotak */
+    max-width: 450px;    /* batas maksimal di PC */
+    max-height: 450px;
     background-color: lightblue;
     border: 5px solid slategray;
     border-radius: 10px;
@@ -18,6 +20,9 @@ body {
 }
 
 #board img {
-    width: 50px;
-    height: 50px;
+    width: calc(90vw / 9);   /* otomatis hitung per kotak */
+    height: calc(90vw / 9);
+    max-width: 50px;
+    max-height: 50px;
+    touch-action: none;      /* penting untuk mobile drag */
 }
